@@ -2,39 +2,39 @@ import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
-    name: "FitZone Pro",
+    name: "Cl\u00ednica Dental Sonrident",
     category: "Google Ads",
-    result: "+320% ROAS",
+    result: "-52% CPL",
     color: "bg-accent/10",
   },
   {
-    name: "Casa Bella Deco",
+    name: "Centro M\u00e9dico Vitae",
     category: "Meta Ads",
-    result: "-45% CPA",
+    result: "+180% citas",
     color: "bg-accent/5",
   },
   {
-    name: "TechVault",
+    name: "Cl\u00ednica Est\u00e9tica Glow",
     category: "Google Ads + Meta",
-    result: "+180% ventas",
+    result: "+210% pacientes",
     color: "bg-accent/10",
   },
   {
-    name: "NutriVida",
-    category: "TikTok Ads",
-    result: "+500% alcance",
+    name: "FisioPlus Madrid",
+    category: "Google Ads",
+    result: "-38% coste/cita",
     color: "bg-accent/5",
   },
   {
-    name: "Urban Style Co.",
+    name: "Dermaclinic Barcelona",
     category: "Meta Ads",
-    result: "4.2x ROAS",
+    result: "+300% leads",
     color: "bg-accent/10",
   },
   {
-    name: "CloudSoft",
-    category: "Google Ads",
-    result: "+250% leads",
+    name: "Cl\u00ednica Capilar Renova",
+    category: "Google Ads + Meta",
+    result: "4.5x ROAS",
     color: "bg-accent/5",
   },
 ];
@@ -45,14 +45,13 @@ export function Projects() {
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-medium uppercase tracking-[0.3em] text-accent">
-            Proyectos
+            Resultados
           </p>
           <h2 className="mt-4 text-balance text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-            Resultados que hablan por si solos
+            {"Cl\u00ednicas que ya captan m\u00e1s pacientes"}
           </h2>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Lanzamos y escalamos proyectos. Cada caso es un sistema probado con
-            resultados medibles.
+            {"Cada proyecto es una cl\u00ednica real con resultados medibles: menos coste por lead, m\u00e1s citas agendadas y m\u00e1s pacientes nuevos."}
           </p>
         </div>
 

@@ -2,12 +2,12 @@ const words = [
   "Google Ads",
   "Meta Ads",
   "Paid Media",
-  "Captacion de Pacientes",
-  "Clinicas",
+  "Captaci\u00f3n de Pacientes",
+  "Cl\u00ednicas",
   "Leads Cualificados",
   "Citas Agendadas",
   "Sector Salud",
-  "Conversion",
+  "Conversi\u00f3n",
   "Data-Driven",
 ];
 

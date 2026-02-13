@@ -1,7 +1,7 @@
 const stats = [
-  { value: "+200", label: "Clinicas que confian en nosotros" },
-  { value: "+30M", label: "En inversion publicitaria gestionada" },
-  { value: "+8", label: "Anos captando pacientes" },
+  { value: "+200", label: "Cl\u00ednicas que conf\u00edan en nosotros" },
+  { value: "+30M", label: "En inversi\u00f3n publicitaria gestionada" },
+  { value: "+8", label: "A\u00f1os captando pacientes" },
   { value: "-40%", label: "Coste por lead medio" },
 ];
 

@@ -7,18 +7,16 @@ export function Hero() {
       
       <div className="relative z-10 mx-auto max-w-5xl text-center">
         <p className="mb-6 text-sm font-medium uppercase tracking-[0.3em] text-accent">
-          Agencia de Paid Media para Clinicas
+          {"Agencia de Paid Media para Cl\u00ednicas"}
         </p>
 
         <h1 className="text-balance text-5xl font-bold leading-[1.1] tracking-tight text-foreground md:text-7xl lg:text-8xl">
-          Captamos pacientes para tu{" "}
-          <span className="text-accent">clinica</span>
+          {"Captamos pacientes para tu "}
+          <span className="text-accent">{"cl\u00ednica"}</span>
         </h1>
 
         <p className="mx-auto mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
-          Generamos leads cualificados y citas reales para clinicas y centros
-          medicos mediante Google Ads y Meta Ads. Sin promesas vacias, solo
-          resultados medibles.
+          {"Generamos leads cualificados y citas reales para cl\u00ednicas y centros m\u00e9dicos mediante Google Ads y Meta Ads. Sin promesas vac\u00edas, solo resultados medibles."}
         </p>
 
         <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -26,13 +24,13 @@ export function Hero() {
             href="#contacto"
             className="rounded-full bg-accent px-8 py-4 text-base font-medium text-accent-foreground transition-opacity hover:opacity-90"
           >
-            Quiero mas pacientes
+            {"Quiero m\u00e1s pacientes"}
           </a>
           <a
             href="#nosotros"
             className="rounded-full border border-border px-8 py-4 text-base font-medium text-foreground transition-colors hover:bg-muted"
           >
-            Solicitar diagnostico
+            {"Solicitar diagn\u00f3stico"}
           </a>
         </div>
       </div>
