@@ -16,7 +16,7 @@ export function CTA() {
         </p>
         <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
-            href="mailto:hola@pulpodigital.com"
+            href="mailto:hola@pulpodigital.es"
             className="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 text-base font-medium text-accent-foreground transition-opacity hover:opacity-90"
           >
             Agendar llamada
