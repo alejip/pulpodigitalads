@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0a0a0a;
-  --color-foreground: #fafafa;
-  --color-muted: #171717;
-  --color-muted-foreground: #a1a1a1;
-  --color-card: #141414;
-  --color-card-foreground: #fafafa;
-  --color-border: #262626;
-  --color-accent: #e63946;
-  --color-accent-foreground: #fafafa;
-  --color-secondary: #1a1a2e;
-  --color-secondary-foreground: #fafafa;
+  --color-background: #111111;
+  --color-foreground: #ffffff;
+  --color-muted: #1a1a1a;
+  --color-muted-foreground: #999999;
+  --color-card: #181818;
+  --color-card-foreground: #ffffff;
+  --color-border: #2a2a2a;
+  --color-accent: #c8a87c;
+  --color-accent-foreground: #111111;
+  --color-secondary: #1e1e1e;
+  --color-secondary-foreground: #ffffff;
 
   --font-sans: var(--font-inter);
   --font-mono: var(--font-space-grotesk);
@@ -31,7 +31,7 @@ body {
 
 ::selection {
   background-color: var(--color-accent);
-  color: var(--color-foreground);
+  color: var(--color-accent-foreground);
 }
 
 @keyframes marquee {
