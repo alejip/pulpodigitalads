@@ -3,38 +3,38 @@ import { Megaphone, BarChart3, Sparkles, Monitor, Zap } from "lucide-react";
 const services = [
   {
     icon: Megaphone,
-    title: "Google Ads",
+    title: "Google Ads para Clinicas",
     description:
-      "Campanas de Search, Display, Shopping y YouTube optimizadas con IA para maximizar conversiones y reducir el CPA.",
-    tag: "IA",
+      "Campanas de Search y Display orientadas a captar pacientes con alta intencion. Aparece cuando buscan tu especialidad.",
+    tag: "Alta intencion",
   },
   {
     icon: BarChart3,
-    title: "Meta Ads",
+    title: "Meta Ads para Clinicas",
     description:
-      "Publicidad en Facebook e Instagram con segmentacion avanzada, creatividades que convierten y optimizacion continua.",
+      "Captacion de pacientes en Facebook e Instagram con segmentacion avanzada por ubicacion, intereses y perfil demografico.",
     tag: "IA",
   },
   {
     icon: Sparkles,
-    title: "TikTok Ads",
+    title: "Optimizacion de Conversion",
     description:
-      "Llega a nuevas audiencias con contenido nativo, formatos Spark Ads y estrategias de performance en TikTok.",
+      "Mejoramos cada punto del embudo para que mas clics se conviertan en citas agendadas. Tests A/B, creatividades y landing pages.",
     tag: null,
   },
   {
     icon: Monitor,
-    title: "Landing Pages",
+    title: "Landing Pages Clinicas",
     description:
-      "Paginas de aterrizaje disenadas para convertir. Cada elemento esta pensado estrategicamente para maximizar tus resultados.",
+      "Paginas de aterrizaje disenadas para el sector salud. Cada elemento esta pensado para generar confianza y convertir visitas en pacientes.",
     tag: null,
   },
   {
     icon: Zap,
-    title: "Marketing Automation",
+    title: "Tracking & Reporting",
     description:
-      "Flujos automatizados que retienen, fidelizan y convierten en piloto automatico con revision estrategica constante.",
-    tag: "IA",
+      "Medimos cada lead, cada cita y cada euro invertido. Dashboards en tiempo real para que veas exactamente de donde vienen tus pacientes.",
+    tag: "Data",
   },
 ];
 
@@ -47,11 +47,12 @@ export function Services() {
             Servicios
           </p>
           <h2 className="mt-4 text-balance text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-            Todo lo que necesitas para escalar con Ads
+            Todo lo que tu clinica necesita para captar pacientes
           </h2>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Un equipo experto en las principales plataformas publicitarias,
-            apasionado por los negocios y la publicidad digital.
+            Un equipo especializado en Paid Media para el sector salud.
+            Gestionamos tus campanas de principio a fin para que tu te centres
+            en tus pacientes.
           </p>
         </div>
 

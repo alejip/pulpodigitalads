@@ -3,21 +3,21 @@ import { Brain, Target, TrendingUp } from "lucide-react";
 const principles = [
   {
     icon: Brain,
-    title: "Pensar antes de actuar",
+    title: "Estrategia antes de invertir",
     description:
-      "En un mundo donde todos ejecutan sin criterio, el pensamiento estrategico es la ventaja competitiva de tu negocio.",
+      "Antes de lanzar cualquier campana, analizamos tu clinica, tu paciente ideal y tu competencia para disenar un plan de captacion eficaz.",
   },
   {
     icon: Target,
-    title: "Data-Driven",
+    title: "Leads cualificados",
     description:
-      "Cada decision esta respaldada por datos. No adivinamos, analizamos, medimos y optimizamos constantemente.",
+      "Cada campana esta optimizada para atraer pacientes reales, no clics vacios. Medimos, analizamos y mejoramos continuamente.",
   },
   {
     icon: TrendingUp,
-    title: "Resultados predecibles",
+    title: "Crecimiento predecible",
     description:
-      "No escalamos negocios con publicidad al azar. Establecemos sistemas probados para escalar de forma predecible.",
+      "Creamos sistemas de Paid Media probados para que tu clinica reciba pacientes nuevos de forma constante y escalable.",
   },
 ];
 
@@ -30,12 +30,12 @@ export function About() {
             Nosotros
           </p>
           <h2 className="mt-4 text-balance text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-            Somos la agencia de Ads que no promete milagros.
+            La agencia de Paid Media que entiende el sector salud.
           </h2>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Simplemente trabajamos utilizando estrategia, datos e inteligencia
-            artificial el 99.9% de las veces. Cada euro invertido tiene un
-            proposito claro.
+            Trabajamos exclusivamente con clinicas, centros medicos y negocios
+            de salud. Utilizamos estrategia, datos e inteligencia artificial
+            para convertir cada euro invertido en pacientes reales.
           </p>
         </div>
 
