@@ -79,9 +79,9 @@ export function Footer() {
                 </span>
               </li>
               <li>
-                <span className="text-sm text-muted-foreground">
+                <a href="https://www.instagram.com/_pulpodigital_/" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Instagram
-                </span>
+                </a>
               </li>
             </ul>
           </div>
