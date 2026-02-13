@@ -13,13 +13,13 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Pulpo Digital | Agencia de Ads & Performance",
+  title: "Pulpo Digital | Agencia de Paid Media para Clinicas y Centros Medicos",
   description:
-    "Escalamos tu negocio con publicidad digital basada en datos y estrategia. Google Ads, Meta Ads, TikTok Ads y Performance Marketing.",
+    "Captamos pacientes para clinicas mediante Google Ads y Meta Ads. Agencia de Paid Media especializada en leads cualificados, citas reales y crecimiento predecible para el sector salud.",
   openGraph: {
-    title: "Pulpo Digital | Agencia de Ads & Performance",
+    title: "Pulpo Digital | Captacion de Pacientes con Paid Media",
     description:
-      "Escalamos tu negocio con publicidad digital basada en datos y estrategia.",
+      "Agencia de Paid Media especializada en captacion de pacientes para clinicas. Google Ads, Meta Ads, leads cualificados y citas agendadas.",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
 };

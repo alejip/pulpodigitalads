@@ -1,8 +1,8 @@
 const stats = [
-  { value: "+200", label: "Proyectos gestionados" },
-  { value: "+30M", label: "En inversion publicitaria" },
-  { value: "+8", label: "Anos de experiencia" },
-  { value: "4.8x", label: "ROAS promedio" },
+  { value: "+200", label: "Clinicas que confian en nosotros" },
+  { value: "+30M", label: "En inversion publicitaria gestionada" },
+  { value: "+8", label: "Anos captando pacientes" },
+  { value: "-40%", label: "Coste por lead medio" },
 ];
 
 export function Stats() {

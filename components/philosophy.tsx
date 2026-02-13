@@ -5,23 +5,25 @@ export function Philosophy() {
         <div className="grid items-center gap-16 lg:grid-cols-2">
           <div>
             <h2 className="text-balance text-4xl font-bold leading-tight tracking-tight text-foreground md:text-5xl">
-              La tecnologia sin estrategia,{" "}
-              <span className="text-accent">es solo ruido.</span>
+              Hacer Ads sin estrategia,{" "}
+              <span className="text-accent">es tirar dinero.</span>
             </h2>
             <p className="mt-8 text-pretty text-lg leading-relaxed text-muted-foreground">
-              Existen infinidad de plataformas publicitarias y herramientas que
-              sin una hoja de ruta totalmente definida y clara, no serviran
-              absolutamente nada a tus objetivos de negocio.
+              Muchas clinicas invierten en publicidad sin un plan claro y
+              terminan pagando por clics que nunca se convierten en pacientes.
+              Sin estrategia, las plataformas publicitarias no generan
+              resultados.
             </p>
             <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-              En Pulpo Digital lo tenemos claro. Publicidad si, por supuesto,
-              pero basada en estrategia, conocimiento y datos reales.
+              En Pulpo Digital diseñamos campanas de captacion basadas en datos
+              reales, con objetivos claros: mas leads cualificados, mas citas
+              agendadas y mas pacientes para tu clinica.
             </p>
             <a
               href="#contacto"
               className="mt-8 inline-flex rounded-full bg-accent px-8 py-4 text-base font-medium text-accent-foreground transition-opacity hover:opacity-90"
             >
-              Hablar con el equipo
+              Solicitar diagnostico gratuito
             </a>
           </div>
 

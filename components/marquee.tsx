@@ -1,14 +1,14 @@
 const words = [
   "Google Ads",
   "Meta Ads",
-  "TikTok Ads",
-  "Performance",
-  "Data-Driven",
-  "Estrategia",
+  "Paid Media",
+  "Captacion de Pacientes",
+  "Clinicas",
+  "Leads Cualificados",
+  "Citas Agendadas",
+  "Sector Salud",
   "Conversion",
-  "ROAS",
-  "Automatizacion",
-  "Escalabilidad",
+  "Data-Driven",
 ];
 
 export function Marquee() {
