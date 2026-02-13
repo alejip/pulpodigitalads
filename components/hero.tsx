@@ -3,7 +3,7 @@ import { ArrowDown } from "lucide-react";
 export function Hero() {
   return (
     <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-20">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(200,168,124,0.08)_0%,_transparent_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(200,168,124,0.12)_0%,_transparent_70%)]" />
       
       <div className="relative z-10 mx-auto max-w-5xl text-center">
         <p className="mb-6 text-sm font-medium uppercase tracking-[0.3em] text-accent">
