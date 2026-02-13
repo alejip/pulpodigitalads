@@ -11,7 +11,7 @@ export function Hero() {
         </p>
 
         <h1 className="text-balance text-5xl font-bold leading-[1.1] tracking-tight text-foreground md:text-7xl lg:text-8xl">
-          Escalamos tu negocio con{" "}
+          Impulsamos tu negocio con{" "}
           <span className="text-accent">resultados</span>
         </h1>
 

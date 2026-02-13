@@ -15,11 +15,11 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Pulpo Digital | Agencia de Ads & Performance",
   description:
-    "Escalamos tu negocio con publicidad digital basada en datos y estrategia. Google Ads, Meta Ads, TikTok Ads y Performance Marketing.",
+    "Impulsamos tu negocio con publicidad digital basada en datos y estrategia. Google Ads, Meta Ads, TikTok Ads y Performance Marketing.",
   openGraph: {
     title: "Pulpo Digital | Agencia de Ads & Performance",
     description:
-      "Escalamos tu negocio con publicidad digital basada en datos y estrategia.",
+      "Impulsamos tu negocio con publicidad digital basada en datos y estrategia.",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
 };
