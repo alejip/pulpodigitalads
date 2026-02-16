@@ -19,13 +19,13 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              {"Agencia de Paid Media especializada en captaci\u00f3n de pacientes para cl\u00ednicas y centros m\u00e9dicos. Google Ads, Meta Ads y estrategia basada en datos."}
+              Agencia de Paid Media especializada en captación de pacientes para clínicas y centros médicos. Google Ads, Meta Ads y estrategia basada en datos.
             </p>
           </div>
 
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-foreground">
-              {"Navegaci\u00f3n"}
+              Navegación
             </h4>
             <ul className="mt-4 flex flex-col gap-3">
               <li>
@@ -92,10 +92,10 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 md:flex-row">
           <p className="text-xs text-muted-foreground">
-            {"2026 Pulpo Digital. Todos los derechos reservados."}
+            2026 Pulpo Digital. Todos los derechos reservados.
           </p>
           <p className="text-xs text-muted-foreground">
-            {"Paid Media para Cl\u00ednicas"}
+            Paid Media para Clínicas
           </p>
         </div>
       </div>
