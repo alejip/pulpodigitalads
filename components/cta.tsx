@@ -22,7 +22,7 @@ export function CTA() {
             <ArrowRight size={18} />
           </a>
           <a
-            href="https://wa.me/1234567890"
+            href="https://wa.me/34644737957"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-border px-8 py-4 text-base font-medium text-foreground transition-colors hover:bg-muted"
