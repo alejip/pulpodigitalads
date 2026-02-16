@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function Footer() {
   return (
     <footer className="border-t border-border px-6 py-16">
@@ -5,11 +7,13 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent">
-                <span className="text-lg font-bold text-accent-foreground font-mono">
-                  P
-                </span>
-              </div>
+              <Image
+                src="/images/logo.png"
+                alt="Pulpo Digital logo"
+                width={40}
+                height={40}
+                className="h-10 w-10 object-contain"
+              />
               <span className="text-xl font-bold tracking-tight text-foreground">
                 Pulpo Digital
               </span>
