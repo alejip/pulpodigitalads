@@ -2,19 +2,19 @@ import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
-    name: "Cl\u00ednica Dental Sonrident",
+    name: "Clínica Dental Sonrident",
     category: "Google Ads",
     result: "-52% CPL",
     color: "bg-accent/10",
   },
   {
-    name: "Centro M\u00e9dico Vitae",
+    name: "Centro Médico Vitae",
     category: "Meta Ads",
     result: "+180% citas",
     color: "bg-accent/5",
   },
   {
-    name: "Cl\u00ednica Est\u00e9tica Glow",
+    name: "Clínica Estética Glow",
     category: "Google Ads + Meta",
     result: "+210% pacientes",
     color: "bg-accent/10",
@@ -32,7 +32,7 @@ const projects = [
     color: "bg-accent/10",
   },
   {
-    name: "Cl\u00ednica Capilar Renova",
+    name: "Clínica Capilar Renova",
     category: "Google Ads + Meta",
     result: "4.5x ROAS",
     color: "bg-accent/5",
@@ -48,10 +48,10 @@ export function Projects() {
             Resultados
           </p>
           <h2 className="mt-4 text-balance text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-            {"Cl\u00ednicas que ya captan m\u00e1s pacientes"}
+            Clínicas que ya captan más pacientes
           </h2>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-            {"Cada proyecto es una cl\u00ednica real con resultados medibles: menos coste por lead, m\u00e1s citas agendadas y m\u00e1s pacientes nuevos."}
+            Cada proyecto es una clínica real con resultados medibles: menos coste por lead, más citas agendadas y más pacientes nuevos.
           </p>
         </div>
 
