@@ -3,37 +3,37 @@ import { Megaphone, BarChart3, Sparkles, Monitor, Zap } from "lucide-react";
 const services = [
   {
     icon: Megaphone,
-    title: "Google Ads para Clinicas",
+    title: "Google Ads para Cl\u00ednicas",
     description:
-      "Campanas de Search y Display orientadas a captar pacientes con alta intencion. Aparece cuando buscan tu especialidad.",
-    tag: "Alta intencion",
+      "Campa\u00f1as de Search y Display orientadas a captar pacientes con alta intenci\u00f3n. Aparece cuando buscan tu especialidad.",
+    tag: "Alta intenci\u00f3n",
   },
   {
     icon: BarChart3,
-    title: "Meta Ads para Clinicas",
+    title: "Meta Ads para Cl\u00ednicas",
     description:
-      "Captacion de pacientes en Facebook e Instagram con segmentacion avanzada por ubicacion, intereses y perfil demografico.",
+      "Captaci\u00f3n de pacientes en Facebook e Instagram con segmentaci\u00f3n avanzada por ubicaci\u00f3n, intereses y perfil demogr\u00e1fico.",
     tag: "IA",
   },
   {
     icon: Sparkles,
-    title: "Optimizacion de Conversion",
+    title: "Optimizaci\u00f3n de Conversi\u00f3n",
     description:
-      "Mejoramos cada punto del embudo para que mas clics se conviertan en citas agendadas. Tests A/B, creatividades y landing pages.",
+      "Mejoramos cada punto del embudo para que m\u00e1s clics se conviertan en citas agendadas. Tests A/B, creatividades y landing pages.",
     tag: null,
   },
   {
     icon: Monitor,
-    title: "Landing Pages Clinicas",
+    title: "Landing Pages Cl\u00ednicas",
     description:
-      "Paginas de aterrizaje disenadas para el sector salud. Cada elemento esta pensado para generar confianza y convertir visitas en pacientes.",
+      "P\u00e1ginas de aterrizaje dise\u00f1adas para el sector salud. Cada elemento est\u00e1 pensado para generar confianza y convertir visitas en pacientes.",
     tag: null,
   },
   {
     icon: Zap,
     title: "Tracking & Reporting",
     description:
-      "Medimos cada lead, cada cita y cada euro invertido. Dashboards en tiempo real para que veas exactamente de donde vienen tus pacientes.",
+      "Medimos cada lead, cada cita y cada euro invertido. Dashboards en tiempo real para que veas exactamente de d\u00f3nde vienen tus pacientes.",
     tag: "Data",
   },
 ];
@@ -47,12 +47,10 @@ export function Services() {
             Servicios
           </p>
           <h2 className="mt-4 text-balance text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-            Todo lo que tu clinica necesita para captar pacientes
+            {"Todo lo que tu cl\u00ednica necesita para captar pacientes"}
           </h2>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Un equipo especializado en Paid Media para el sector salud.
-            Gestionamos tus campanas de principio a fin para que tu te centres
-            en tus pacientes.
+            {"Un equipo especializado en Paid Media para el sector salud. Gestionamos tus campa\u00f1as de principio a fin para que t\u00fa te centres en tus pacientes."}
           </p>
         </div>
 

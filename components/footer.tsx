@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function Footer() {
   return (
     <footer className="border-t border-border px-6 py-16">
@@ -5,24 +7,25 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent">
-                <span className="text-lg font-bold text-accent-foreground font-mono">
-                  P
-                </span>
-              </div>
+              <Image
+                src="/images/logo.png"
+                alt="Pulpo Digital logo"
+                width={40}
+                height={40}
+                className="h-10 w-10 object-contain"
+              />
               <span className="text-xl font-bold tracking-tight text-foreground">
                 Pulpo Digital
               </span>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Agencia de Ads & Performance. Escalamos negocios con publicidad
-              digital basada en datos, estrategia e inteligencia artificial.
+              {"Agencia de Paid Media especializada en captaci\u00f3n de pacientes para cl\u00ednicas y centros m\u00e9dicos. Google Ads, Meta Ads y estrategia basada en datos."}
             </p>
           </div>
 
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-foreground">
-              Navegacion
+              {"Navegaci\u00f3n"}
             </h4>
             <ul className="mt-4 flex flex-col gap-3">
               <li>
@@ -46,7 +49,7 @@ export function Footer() {
                   href="#proyectos"
                   className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  Proyectos
+                  Resultados
                 </a>
               </li>
               <li>
@@ -92,7 +95,7 @@ export function Footer() {
             {"2026 Pulpo Digital. Todos los derechos reservados."}
           </p>
           <p className="text-xs text-muted-foreground">
-            Ads & Performance Marketing
+            {"Paid Media para Cl\u00ednicas"}
           </p>
         </div>
       </div>

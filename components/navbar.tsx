@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Nosotros", href: "#nosotros" },
@@ -59,11 +60,13 @@ export function Navbar() {
         >
           {/* Logo */}
           <a href="#" className="flex items-center gap-2.5 pl-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent">
-              <span className="text-sm font-bold text-accent-foreground font-mono">
-                P
-              </span>
-            </div>
+            <Image
+              src="/images/logo.png"
+              alt="Pulpo Digital logo"
+              width={32}
+              height={32}
+              className="h-8 w-8 object-contain"
+            />
             <span className="text-sm font-semibold tracking-tight text-foreground">
               Pulpo Digital
             </span>

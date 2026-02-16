@@ -5,25 +5,20 @@ export function Philosophy() {
         <div className="grid items-center gap-16 lg:grid-cols-2">
           <div>
             <h2 className="text-balance text-4xl font-bold leading-tight tracking-tight text-foreground md:text-5xl">
-              Hacer Ads sin estrategia,{" "}
-              <span className="text-accent">es tirar dinero.</span>
+              {"Hacer Ads sin estrategia, "}
+              <span className="text-accent">{"es tirar dinero."}</span>
             </h2>
             <p className="mt-8 text-pretty text-lg leading-relaxed text-muted-foreground">
-              Muchas clinicas invierten en publicidad sin un plan claro y
-              terminan pagando por clics que nunca se convierten en pacientes.
-              Sin estrategia, las plataformas publicitarias no generan
-              resultados.
+              {"Muchas cl\u00ednicas invierten en publicidad sin un plan claro y terminan pagando por clics que nunca se convierten en pacientes. Sin estrategia, las plataformas publicitarias no generan resultados."}
             </p>
             <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-              En Pulpo Digital diseñamos campanas de captacion basadas en datos
-              reales, con objetivos claros: mas leads cualificados, mas citas
-              agendadas y mas pacientes para tu clinica.
+              {"En Pulpo Digital dise\u00f1amos campa\u00f1as de captaci\u00f3n basadas en datos reales, con objetivos claros: m\u00e1s leads cualificados, m\u00e1s citas agendadas y m\u00e1s pacientes para tu cl\u00ednica."}
             </p>
             <a
               href="#contacto"
               className="mt-8 inline-flex rounded-full bg-accent px-8 py-4 text-base font-medium text-accent-foreground transition-opacity hover:opacity-90"
             >
-              Solicitar diagnostico gratuito
+              {"Solicitar diagn\u00f3stico gratuito"}
             </a>
           </div>
 
@@ -36,16 +31,16 @@ export function Philosophy() {
                     Estrategia
                   </p>
                   <p className="mt-1 text-sm text-muted-foreground">
-                    Definimos objetivos claros y un plan de accion medible
+                    {"Definimos objetivos claros y un plan de acci\u00f3n medible"}
                   </p>
                 </div>
                 <div className="rounded-2xl border border-border bg-card p-6">
                   <span className="font-mono text-3xl font-bold text-accent">02</span>
                   <p className="mt-3 font-medium text-card-foreground">
-                    Ejecucion
+                    {"Ejecuci\u00f3n"}
                   </p>
                   <p className="mt-1 text-sm text-muted-foreground">
-                    Lanzamos campanas optimizadas con las mejores practicas
+                    {"Lanzamos campa\u00f1as optimizadas con las mejores pr\u00e1cticas"}
                   </p>
                 </div>
               </div>
@@ -53,7 +48,7 @@ export function Philosophy() {
                 <div className="rounded-2xl border border-border bg-card p-6">
                   <span className="font-mono text-3xl font-bold text-accent">03</span>
                   <p className="mt-3 font-medium text-card-foreground">
-                    Optimizacion
+                    {"Optimizaci\u00f3n"}
                   </p>
                   <p className="mt-1 text-sm text-muted-foreground">
                     Analizamos datos en tiempo real y ajustamos constantemente

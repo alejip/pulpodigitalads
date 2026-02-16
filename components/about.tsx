@@ -5,19 +5,19 @@ const principles = [
     icon: Brain,
     title: "Estrategia antes de invertir",
     description:
-      "Antes de lanzar cualquier campana, analizamos tu clinica, tu paciente ideal y tu competencia para disenar un plan de captacion eficaz.",
+      "Antes de lanzar cualquier campa\u00f1a, analizamos tu cl\u00ednica, tu paciente ideal y tu competencia para dise\u00f1ar un plan de captaci\u00f3n eficaz.",
   },
   {
     icon: Target,
     title: "Leads cualificados",
     description:
-      "Cada campana esta optimizada para atraer pacientes reales, no clics vacios. Medimos, analizamos y mejoramos continuamente.",
+      "Cada campa\u00f1a est\u00e1 optimizada para atraer pacientes reales, no clics vac\u00edos. Medimos, analizamos y mejoramos continuamente.",
   },
   {
     icon: TrendingUp,
     title: "Crecimiento predecible",
     description:
-      "Creamos sistemas de Paid Media probados para que tu clinica reciba pacientes nuevos de forma constante y escalable.",
+      "Creamos sistemas de Paid Media probados para que tu cl\u00ednica reciba pacientes nuevos de forma constante y escalable.",
   },
 ];
 
@@ -30,12 +30,10 @@ export function About() {
             Nosotros
           </p>
           <h2 className="mt-4 text-balance text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-            La agencia de Paid Media que entiende el sector salud.
+            {"La agencia de Paid Media que entiende el sector salud."}
           </h2>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Trabajamos exclusivamente con clinicas, centros medicos y negocios
-            de salud. Utilizamos estrategia, datos e inteligencia artificial
-            para convertir cada euro invertido en pacientes reales.
+            {"Trabajamos exclusivamente con cl\u00ednicas, centros m\u00e9dicos y negocios de salud. Utilizamos estrategia, datos e inteligencia artificial para convertir cada euro invertido en pacientes reales."}
           </p>
         </div>
 
