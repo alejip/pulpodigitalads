@@ -1,9 +1,10 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+import { MouseEvent } from "react";
 
 export function CTA() {
-  const handleEmailClick = (e) => {
+  const handleEmailClick = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     window.location.href = "mailto:hola@pulpodigital.es";
   };
