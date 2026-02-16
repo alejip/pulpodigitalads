@@ -1,6 +1,13 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
 
 export function CTA() {
+  const handleEmailClick = (e) => {
+    e.preventDefault();
+    window.location.href = "mailto:hola@pulpodigital.es";
+  };
+
   return (
     <section id="contacto" className="px-6 py-32">
       <div className="mx-auto max-w-4xl text-center">
@@ -14,13 +21,13 @@ export function CTA() {
           Agenda una llamada de diagnóstico gratuita. Analizamos tu situación actual, tus objetivos y te proponemos un plan de captación claro y medible.
         </p>
         <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a
-            href="mailto:hola@pulpodigital.es"
-            className="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 text-base font-medium text-accent-foreground transition-opacity hover:opacity-90"
+          <button
+            onClick={handleEmailClick}
+            className="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 text-base font-medium text-accent-foreground transition-opacity hover:opacity-90 cursor-pointer"
           >
             Agendar llamada
             <ArrowRight size={18} />
-          </a>
+          </button>
           <a
             href="https://wa.me/34644737957"
             target="_blank"
