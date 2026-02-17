@@ -152,7 +152,7 @@ export function CTA() {
               id="telefono"
               name="telefono"
               className="mt-2 w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground placeholder-muted-foreground focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
-              placeholder="+34 644 73 79 57"
+              placeholder="Tu nº de móvil"
             />
           </div>
 
