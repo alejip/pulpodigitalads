@@ -6,6 +6,7 @@ import { X } from "lucide-react";
 export function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const [consent, setConsent] = useState({
     necessary: true,
     analytics: false,
@@ -13,13 +14,20 @@ export function CookieBanner() {
   });
 
   useEffect(() => {
+    setIsMounted(true);
     const stored = localStorage.getItem("cookie_consent_v1");
     if (!stored) {
       setIsVisible(true);
     } else {
-      setConsent(JSON.parse(stored));
+      try {
+        setConsent(JSON.parse(stored));
+      } catch (e) {
+        setIsVisible(true);
+      }
     }
   }, []);
+
+  if (!isMounted) return null;
 
   const handleAcceptAll = () => {
     const newConsent = {
@@ -30,7 +38,6 @@ export function CookieBanner() {
     localStorage.setItem("cookie_consent_v1", JSON.stringify(newConsent));
     setConsent(newConsent);
     setIsVisible(false);
-    loadScripts(newConsent);
   };
 
   const handleRejectNonEssential = () => {
@@ -48,175 +55,123 @@ export function CookieBanner() {
     localStorage.setItem("cookie_consent_v1", JSON.stringify(consent));
     setIsVisible(false);
     setShowModal(false);
-    loadScripts(consent);
   };
 
-  const loadScripts = (consentSettings: typeof consent) => {
-    if (consentSettings.analytics) {
-      loadGA4();
-    }
-    if (consentSettings.advertising) {
-      loadMetaPixel();
-      loadGoogleAds();
-    }
+  const toggleConsent = (key: keyof typeof consent) => {
+    if (key === "necessary") return;
+    setConsent((prev) => ({ ...prev, [key]: !prev[key] }));
   };
-
-  const loadGA4 = () => {
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX";
-    document.head.appendChild(script);
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag(...args: any[]) {
-      (window.dataLayer as any).push(args);
-    }
-    gtag("js", new Date());
-    gtag("config", "G-XXXXXXXXXX");
-  };
-
-  const loadMetaPixel = () => {
-    const script = document.createElement("script");
-    script.innerHTML = `
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', 'YOUR_PIXEL_ID');
-      fbq('track', 'PageView');
-    `;
-    document.head.appendChild(script);
-  };
-
-  const loadGoogleAds = () => {
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = "https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX";
-    document.head.appendChild(script);
-  };
-
-  if (!isVisible) return null;
 
   return (
     <>
-      {/* Cookie Banner */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 bg-background border-t border-border p-6 shadow-lg">
-        <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <p className="text-sm leading-relaxed text-foreground max-w-md">
-            🍪 Personalizamos tu experiencia: <strong>Analítica</strong> (Google Analytics) | <strong>Publicidad</strong> (Meta Pixel, Google Ads)
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-            <button
-              onClick={handleAcceptAll}
-              className="px-6 py-2 bg-accent text-accent-foreground rounded-lg text-sm font-medium transition-opacity hover:opacity-90"
-            >
-              Aceptar todas
-            </button>
-            <button
-              onClick={handleRejectNonEssential}
-              className="px-6 py-2 border border-border text-foreground rounded-lg text-sm font-medium transition-colors hover:bg-muted"
-            >
-              Rechazar no esenciales
-            </button>
-            <button
-              onClick={() => setShowModal(true)}
-              className="px-6 py-2 border border-border text-foreground rounded-lg text-sm font-medium transition-colors hover:bg-muted"
-            >
-              Configurar
-            </button>
+      {isVisible && (
+        <div className="fixed bottom-0 left-0 right-0 z-50 bg-background border-t border-border shadow-lg">
+          <div className="mx-auto max-w-6xl px-6 py-6">
+            <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+              <div className="flex-1">
+                <p className="text-sm text-foreground">
+                  🍪 Personaliza tus cookies: Analítica (Google) | Publicidad (Meta/Google Ads)
+                </p>
+              </div>
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <button
+                  onClick={handleRejectNonEssential}
+                  className="rounded-lg border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+                >
+                  Rechazar no esenciales
+                </button>
+                <button
+                  onClick={() => setShowModal(true)}
+                  className="rounded-lg border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+                >
+                  Configurar
+                </button>
+                <button
+                  onClick={handleAcceptAll}
+                  className="rounded-lg bg-accent px-4 py-2 text-sm font-medium text-accent-foreground transition-opacity hover:opacity-90"
+                >
+                  Aceptar todas
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
-      {/* Modal de Configuración */}
       {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-6">
-          <div className="bg-background border border-border rounded-lg max-w-md w-full p-8 shadow-xl">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-xl font-bold text-foreground">
-                Configuración de cookies
-              </h2>
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-6">
+          <div className="max-w-lg rounded-lg bg-background p-8 shadow-xl">
+            <div className="mb-6 flex items-center justify-between">
+              <h2 className="text-2xl font-bold text-foreground">Preferencias de Cookies</h2>
               <button
                 onClick={() => setShowModal(false)}
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-muted-foreground hover:text-foreground"
               >
-                <X size={20} />
+                <X size={24} />
               </button>
             </div>
 
-            <div className="space-y-4 mb-6">
-              {/* Necesarias */}
-              <div className="flex items-center justify-between p-4 bg-muted/50 rounded-lg">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between rounded-lg border border-border p-4">
                 <div>
-                  <p className="font-medium text-foreground">Necesarias</p>
-                  <p className="text-xs text-muted-foreground">Siempre activas</p>
+                  <h3 className="font-semibold text-foreground">Necesarias</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Esenciales para el funcionamiento del sitio
+                  </p>
                 </div>
                 <input
                   type="checkbox"
-                  checked={true}
+                  checked={consent.necessary}
                   disabled
-                  className="w-5 h-5"
+                  className="h-5 w-5"
                 />
               </div>
 
-              {/* Analítica */}
-              <div className="flex items-center justify-between p-4 border border-border rounded-lg">
+              <div className="flex items-center justify-between rounded-lg border border-border p-4">
                 <div>
-                  <p className="font-medium text-foreground">Analítica</p>
-                  <p className="text-xs text-muted-foreground">Google Analytics 4</p>
+                  <h3 className="font-semibold text-foreground">Analítica (GA4)</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Para entender cómo usas nuestro sitio
+                  </p>
                 </div>
                 <input
                   type="checkbox"
                   checked={consent.analytics}
-                  onChange={(e) =>
-                    setConsent({ ...consent, analytics: e.target.checked })
-                  }
-                  className="w-5 h-5"
+                  onChange={() => toggleConsent("analytics")}
+                  className="h-5 w-5 cursor-pointer"
                 />
               </div>
 
-              {/* Publicidad */}
-              <div className="flex items-center justify-between p-4 border border-border rounded-lg">
+              <div className="flex items-center justify-between rounded-lg border border-border p-4">
                 <div>
-                  <p className="font-medium text-foreground">Publicidad</p>
-                  <p className="text-xs text-muted-foreground">Meta Pixel, Google Ads</p>
+                  <h3 className="font-semibold text-foreground">Publicidad (Meta/Google)</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Para personalizar anuncios y seguimiento
+                  </p>
                 </div>
                 <input
                   type="checkbox"
                   checked={consent.advertising}
-                  onChange={(e) =>
-                    setConsent({ ...consent, advertising: e.target.checked })
-                  }
-                  className="w-5 h-5"
+                  onChange={() => toggleConsent("advertising")}
+                  className="h-5 w-5 cursor-pointer"
                 />
               </div>
             </div>
 
-            <div className="flex gap-3">
-              <button
-                onClick={handleSavePreferences}
-                className="flex-1 px-4 py-2 bg-accent text-accent-foreground rounded-lg text-sm font-medium transition-opacity hover:opacity-90"
-              >
-                Guardar preferencias
-              </button>
+            <div className="mt-8 flex gap-3">
               <button
                 onClick={() => setShowModal(false)}
-                className="flex-1 px-4 py-2 border border-border text-foreground rounded-lg text-sm font-medium transition-colors hover:bg-muted"
+                className="flex-1 rounded-lg border border-border px-4 py-2 font-medium text-foreground transition-colors hover:bg-muted"
               >
                 Cancelar
               </button>
+              <button
+                onClick={handleSavePreferences}
+                className="flex-1 rounded-lg bg-accent px-4 py-2 font-medium text-accent-foreground transition-opacity hover:opacity-90"
+              >
+                Guardar
+              </button>
             </div>
-
-            <p className="text-xs text-muted-foreground mt-4 text-center">
-              Lee nuestra{" "}
-              <a href="/privacidad" className="text-accent hover:underline">
-                política de privacidad
-              </a>
-            </p>
           </div>
         </div>
       )}
