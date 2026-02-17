@@ -90,13 +90,40 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 md:flex-row">
-          <p className="text-xs text-muted-foreground">
-            {"2026 Pulpo Digital. Todos los derechos reservados."}
-          </p>
-          <p className="text-xs text-muted-foreground">
-            {"Paid Media para Cl\u00ednicas"}
-          </p>
+        <div className="mt-16 flex flex-col items-center justify-between gap-8 border-t border-border pt-8">
+          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
+            <a
+              href="/privacidad"
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+            >
+              PRIVACIDAD
+            </a>
+            <span className="text-xs text-border">•</span>
+            <button
+              onClick={() => {
+                const banner = document.querySelector("[data-cookie-banner]");
+                if (banner) banner.style.display = "block";
+              }}
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+            >
+              CONFIGURAR COOKIES
+            </button>
+            <span className="text-xs text-border">•</span>
+            <a
+              href="/cookies"
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+            >
+              LEGAL
+            </a>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <p className="text-xs text-muted-foreground">
+              {"2026 Pulpo Digital. Todos los derechos reservados."}
+            </p>
+            <p className="text-xs text-muted-foreground">
+              {"Paid Media para Cl\u00ednicas"}
+            </p>
+          </div>
         </div>
       </div>
     </footer>

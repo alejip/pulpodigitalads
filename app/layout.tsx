@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
+import { CookieBanner } from "@/components/cookie-banner";
 import "./globals.css";
 
 const inter = Inter({
@@ -58,6 +59,7 @@ f.parentNode.insertBefore(j,f);
           />
         </noscript>
         {children}
+        <CookieBanner />
       </body>
     </html>
   );
