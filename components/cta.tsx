@@ -186,7 +186,8 @@ export function CTA() {
               <option value="">Selecciona un servicio</option>
               <option value="Google Ads">Google Ads</option>
               <option value="Meta Ads">Meta Ads</option>
-              <option value="Ambos">Ambos</option>
+              <option value="TikTok Ads">TikTok Ads</option>
+              <option value="Personalizado">Personalizado</option>
             </select>
           </div>
 
@@ -201,7 +202,7 @@ export function CTA() {
               className="mt-2 w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
             >
               <option value="">Selecciona un rango</option>
-              <option value="<600€">Menos de 600€</option>
+              <option value="<1000€">Menos de 1.000€</option>
               <option value="1-2k€">1.000 - 2.000€</option>
               <option value="2-4k€">2.000 - 4.000€</option>
               <option value="4-8k€">4.000 - 8.000€</option>
