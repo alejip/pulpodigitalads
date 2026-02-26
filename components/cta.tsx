@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowRight, CheckCircle, MessageCircle } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 export function CTA() {
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
@@ -23,6 +24,10 @@ export function CTA() {
       [name]: value,
     }));
   };
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -50,6 +55,31 @@ export function CTA() {
       setIsSubmitting(false);
     }
   };
+
+  if (!isMounted) {
+    return (
+      <section id="contacto" className="px-6 py-32">
+        <div className="mx-auto max-w-2xl">
+          <div className="text-center mb-12">
+            <p className="text-sm font-medium uppercase tracking-[0.3em] text-accent">
+              Diagnóstico Gratuito
+            </p>
+            <h2 className="mt-4 text-balance text-4xl font-bold tracking-tight text-foreground md:text-6xl">
+              ¿Quieres más pacientes para tu clínica?
+            </h2>
+            <p className="mx-auto mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
+              Rellena este formulario y nuestro equipo te contactará en 24-48h con un diagnóstico personalizado y sin compromiso.
+            </p>
+          </div>
+          <div className="space-y-6 bg-card p-8 rounded-2xl border border-border">
+            <div className="h-10 bg-muted rounded animate-pulse"></div>
+            <div className="h-10 bg-muted rounded animate-pulse"></div>
+            <div className="h-10 bg-muted rounded animate-pulse"></div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="contacto" className="px-6 py-32">
