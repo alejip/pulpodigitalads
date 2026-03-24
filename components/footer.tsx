@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 export function Footer() {
@@ -90,13 +92,42 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 md:flex-row">
-          <p className="text-xs text-muted-foreground">
-            2026 Pulpo Digital. Todos los derechos reservados.
-          </p>
-          <p className="text-xs text-muted-foreground">
-            Paid Media para Abogados de Accidentes
-          </p>
+        <div className="mt-16 border-t border-border pt-8">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <p className="text-xs text-muted-foreground">
+              © 2026 Pulpo Digital. Todos los derechos reservados.
+            </p>
+            <nav className="flex flex-wrap gap-x-6 gap-y-2">
+              <a
+                href="/aviso-legal"
+                className="text-xs text-muted-foreground transition-colors hover:text-foreground"
+              >
+                Aviso Legal
+              </a>
+              <a
+                href="/politica-de-privacidad"
+                className="text-xs text-muted-foreground transition-colors hover:text-foreground"
+              >
+                Política de Privacidad
+              </a>
+              <a
+                href="/politica-de-cookies"
+                className="text-xs text-muted-foreground transition-colors hover:text-foreground"
+              >
+                Política de Cookies
+              </a>
+              <button
+                onClick={() => {
+                  if (typeof window !== "undefined") {
+                    window.dispatchEvent(new Event("openCookieSettings"));
+                  }
+                }}
+                className="text-xs text-muted-foreground transition-colors hover:text-foreground"
+              >
+                Gestionar cookies
+              </button>
+            </nav>
+          </div>
         </div>
       </div>
     </footer>

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
+import { CookieBanner } from "@/components/cookie-banner";
 import "./globals.css";
 
 const inter = Inter({
@@ -37,6 +38,38 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <head>
+        {/* GTM Consent Mode v2 — debe ejecutarse antes que GTM */}
+        <Script id="consent-init" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+
+            // Denegar todo por defecto (RGPD)
+            gtag('consent', 'default', {
+              'analytics_storage': 'denied',
+              'ad_storage': 'denied',
+              'ad_user_data': 'denied',
+              'ad_personalization': 'denied',
+              'wait_for_update': 2000
+            });
+
+            // Si ya existe consentimiento guardado, aplicarlo inmediatamente
+            try {
+              var stored = localStorage.getItem('pulpo_cookie_consent');
+              if (stored) {
+                var c = JSON.parse(stored);
+                gtag('consent', 'update', {
+                  'analytics_storage': c.analytics ? 'granted' : 'denied',
+                  'ad_storage': c.advertising ? 'granted' : 'denied',
+                  'ad_user_data': c.advertising ? 'granted' : 'denied',
+                  'ad_personalization': c.advertising ? 'granted' : 'denied'
+                });
+              }
+            } catch(e) {}
+          `}
+        </Script>
+
+        {/* Google Tag Manager */}
         <Script id="gtm" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];
 w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
@@ -58,6 +91,7 @@ f.parentNode.insertBefore(j,f);
           />
         </noscript>
         {children}
+        <CookieBanner />
       </body>
     </html>
   );
