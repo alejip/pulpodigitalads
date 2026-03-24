@@ -29,11 +29,11 @@ export function CTA() {
     setIsSubmitting(true);
 
     try {
-      const formElement = e.currentTarget;
-      const response = await fetch("https://formspree.io/f/xreakoko", {
+      const response = await fetch("https://n8n.pulpodigital.es/webhook/pulpo-leads", {
         method: "POST",
-        body: new FormData(formElement),
+        body: JSON.stringify(formData),
         headers: {
+          "Content-Type": "application/json",
           Accept: "application/json",
         },
       });
