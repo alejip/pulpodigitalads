@@ -3,37 +3,37 @@ import { Megaphone, BarChart3, Sparkles, Monitor, Zap } from "lucide-react";
 const services = [
   {
     icon: Megaphone,
-    title: "Google Ads para Clínicas",
+    title: "Google Ads para Abogados",
     description:
-      "Campañas de Search y Display orientadas a captar pacientes con alta intención. Aparece cuando buscan tu especialidad.",
+      "Campañas de Search y Display orientadas a captar accidentados con alta intención. Aparece cuando buscan un abogado de accidentes.",
     tag: "Alta intención",
   },
   {
     icon: BarChart3,
-    title: "Meta Ads para Clínicas",
+    title: "Meta Ads para Abogados",
     description:
-      "Captación de pacientes en Facebook e Instagram con segmentación avanzada por ubicación, intereses y perfil demográfico.",
+      "Captación de clientes en Facebook e Instagram con segmentación avanzada por ubicación, intereses y perfil demográfico.",
     tag: "IA",
   },
   {
     icon: Sparkles,
     title: "Optimización de Conversión",
     description:
-      "Mejoramos cada punto del embudo para que más clics se conviertan en citas agendadas. Tests A/B, creatividades y landing pages.",
+      "Mejoramos cada punto del embudo para que más clics se conviertan en consultas agendadas. Tests A/B, creatividades y landing pages.",
     tag: null,
   },
   {
     icon: Monitor,
-    title: "Landing Pages Clínicas",
+    title: "Landing Pages para Despachos",
     description:
-      "Páginas de aterrizaje diseñadas para el sector salud. Cada elemento está pensado para generar confianza y convertir visitas en pacientes.",
+      "Páginas de aterrizaje diseñadas para el sector legal. Cada elemento está pensado para generar confianza y convertir visitas en clientes.",
     tag: null,
   },
   {
     icon: Zap,
     title: "Tracking & Reporting",
     description:
-      "Medimos cada lead, cada cita y cada euro invertido. Dashboards en tiempo real para que veas exactamente de dónde vienen tus pacientes.",
+      "Medimos cada lead, cada consulta y cada euro invertido. Dashboards en tiempo real para que veas exactamente de dónde vienen tus casos.",
     tag: "Data",
   },
 ];
@@ -47,10 +47,10 @@ export function Services() {
             Servicios
           </p>
           <h2 className="mt-4 text-balance text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-            Todo lo que tu clínica necesita para captar pacientes
+            Todo lo que tu despacho necesita para captar casos
           </h2>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Un equipo especializado en Paid Media para el sector salud. Gestionamos tus campañas de principio a fin para que tú te centres en tus pacientes.
+            Un equipo especializado en Paid Media para el sector legal. Gestionamos tus campañas de principio a fin para que tú te centres en tus clientes.
           </p>
         </div>
 

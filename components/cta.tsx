@@ -59,7 +59,7 @@ export function CTA() {
             Diagnóstico Gratuito
           </p>
           <h2 className="mt-4 text-balance text-4xl font-bold tracking-tight text-foreground md:text-6xl">
-            ¿Quieres más pacientes para tu clínica?
+            ¿Quieres más casos para tu despacho?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
             Rellena este formulario y nuestro equipo te contactará en 24-48h con un diagnóstico personalizado y sin compromiso.
@@ -117,10 +117,10 @@ export function CTA() {
             />
           </div>
 
-          {/* Nombre Clínica */}
+          {/* Nombre Despacho */}
           <div>
             <label htmlFor="clinica" className="block text-sm font-medium text-foreground mb-2">
-              Nombre clínica <span className="text-red-500">*</span>
+              Nombre del despacho <span className="text-red-500">*</span>
             </label>
             <input
               type="text"
@@ -130,7 +130,7 @@ export function CTA() {
               onChange={handleChange}
               required
               className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
-              placeholder="Nombre de tu clínica"
+              placeholder="Nombre de tu despacho"
             />
           </div>
 

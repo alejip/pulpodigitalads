@@ -19,7 +19,7 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Agencia de Paid Media especializada en captación de pacientes para clínicas y centros médicos. Google Ads, Meta Ads y estrategia basada en datos.
+              Agencia de Paid Media especializada en captación de casos para abogados de accidentes y despachos legales. Google Ads, Meta Ads y estrategia basada en datos.
             </p>
           </div>
 
@@ -95,7 +95,7 @@ export function Footer() {
             2026 Pulpo Digital. Todos los derechos reservados.
           </p>
           <p className="text-xs text-muted-foreground">
-            Paid Media para Clínicas
+            Paid Media para Abogados de Accidentes
           </p>
         </div>
       </div>

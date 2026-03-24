@@ -5,19 +5,19 @@ const principles = [
     icon: Brain,
     title: "Estrategia antes de invertir",
     description:
-      "Antes de lanzar cualquier campaña, analizamos tu clínica, tu paciente ideal y tu competencia para diseñar un plan de captación eficaz.",
+      "Antes de lanzar cualquier campaña, analizamos tu despacho, tu cliente ideal y tu competencia para diseñar un plan de captación eficaz.",
   },
   {
     icon: Target,
     title: "Leads cualificados",
     description:
-      "Cada campaña está optimizada para atraer pacientes reales, no clics vacíos. Medimos, analizamos y mejoramos continuamente.",
+      "Cada campaña está optimizada para atraer accidentados reales, no clics vacíos. Medimos, analizamos y mejoramos continuamente.",
   },
   {
     icon: TrendingUp,
     title: "Crecimiento predecible",
     description:
-      "Creamos sistemas de Paid Media probados para que tu clínica reciba pacientes nuevos de forma constante y escalable.",
+      "Creamos sistemas de Paid Media probados para que tu despacho reciba casos nuevos de forma constante y escalable.",
   },
 ];
 
@@ -30,10 +30,10 @@ export function About() {
             Nosotros
           </p>
           <h2 className="mt-4 text-balance text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-            La agencia de Paid Media que entiende el sector salud.
+            La agencia de Paid Media que entiende el sector legal.
           </h2>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Trabajamos exclusivamente con clínicas, centros médicos y negocios de salud. Utilizamos estrategia, datos e inteligencia artificial para convertir cada euro invertido en pacientes reales.
+            Trabajamos exclusivamente con abogados, despachos y bufetes especializados en accidentes. Utilizamos estrategia, datos e inteligencia artificial para convertir cada euro invertido en casos reales.
           </p>
         </div>
 

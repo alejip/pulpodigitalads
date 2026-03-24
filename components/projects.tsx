@@ -2,37 +2,37 @@ import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
-    name: "Clínica Dental Sonrident",
+    name: "Bufete Martínez & Asociados",
     category: "Google Ads",
     result: "-52% CPL",
     color: "bg-accent/10",
   },
   {
-    name: "Centro Médico Vitae",
+    name: "Despacho Legal Vega",
     category: "Meta Ads",
-    result: "+180% citas",
+    result: "+180% consultas",
     color: "bg-accent/5",
   },
   {
-    name: "Clínica Estética Glow",
+    name: "Abogados Accidentes Sur",
     category: "Google Ads + Meta",
-    result: "+210% pacientes",
+    result: "+210% casos",
     color: "bg-accent/10",
   },
   {
-    name: "FisioPlus Madrid",
+    name: "López Abogados Madrid",
     category: "Google Ads",
-    result: "-38% coste/cita",
+    result: "-38% coste/caso",
     color: "bg-accent/5",
   },
   {
-    name: "Dermaclinic Barcelona",
+    name: "Firma Jurídica Castillo",
     category: "Meta Ads",
     result: "+300% leads",
     color: "bg-accent/10",
   },
   {
-    name: "Clínica Capilar Renova",
+    name: "Grupo Legal Renova",
     category: "Google Ads + Meta",
     result: "4.5x ROAS",
     color: "bg-accent/5",
@@ -48,10 +48,10 @@ export function Projects() {
             Resultados
           </p>
           <h2 className="mt-4 text-balance text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-            Clínicas que ya captan más pacientes
+            Despachos que ya captan más casos
           </h2>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Cada proyecto es una clínica real con resultados medibles: menos coste por lead, más citas agendadas y más pacientes nuevos.
+            Cada proyecto es un despacho real con resultados medibles: menos coste por lead, más consultas agendadas y más casos nuevos.
           </p>
         </div>
 

@@ -9,10 +9,10 @@ export function Philosophy() {
               <span className="text-accent">es tirar dinero.</span>
             </h2>
             <p className="mt-8 text-pretty text-lg leading-relaxed text-muted-foreground">
-              Muchas clínicas invierten en publicidad sin un plan claro y terminan pagando por clics que nunca se convierten en pacientes. Sin estrategia, las plataformas publicitarias no generan resultados.
+              Muchos despachos invierten en publicidad sin un plan claro y terminan pagando por clics que nunca se convierten en casos. Sin estrategia, las plataformas publicitarias no generan resultados.
             </p>
             <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-              En Pulpo Digital diseñamos campañas de captación basadas en datos reales, con objetivos claros: más leads cualificados, más citas agendadas y más pacientes para tu clínica.
+              En Pulpo Digital diseñamos campañas de captación basadas en datos reales, con objetivos claros: más leads cualificados, más consultas agendadas y más casos para tu despacho.
             </p>
             <a
               href="#contacto"
