@@ -66,7 +66,7 @@ export function CTA() {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6 bg-card p-8 rounded-2xl border border-border">
+        <form onSubmit={handleSubmit} autoComplete="on" className="space-y-6 bg-card p-8 rounded-2xl border border-border">
           {/* Nombre Completo */}
           <div>
             <label htmlFor="nombre" className="block text-sm font-medium text-foreground mb-2">
@@ -79,6 +79,7 @@ export function CTA() {
               value={formData.nombre}
               onChange={handleChange}
               required
+              autoComplete="name"
               className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
               placeholder="Tu nombre"
             />
@@ -96,6 +97,7 @@ export function CTA() {
               value={formData.email}
               onChange={handleChange}
               required
+              autoComplete="email"
               className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
               placeholder="tu@empresa.com"
             />
@@ -112,6 +114,7 @@ export function CTA() {
               name="telefono"
               value={formData.telefono}
               onChange={handleChange}
+              autoComplete="tel"
               className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
               placeholder="Tu nº WhatsApp"
             />
@@ -129,6 +132,7 @@ export function CTA() {
               value={formData.clinica}
               onChange={handleChange}
               required
+              autoComplete="organization"
               className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
               placeholder="Nombre de tu despacho"
             />
@@ -144,6 +148,7 @@ export function CTA() {
               name="servicio"
               value={formData.servicio}
               onChange={handleChange}
+              autoComplete="off"
               className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
             >
               <option value="Google Ads">Google Ads</option>
@@ -163,6 +168,7 @@ export function CTA() {
               name="presupuesto"
               value={formData.presupuesto}
               onChange={handleChange}
+              autoComplete="off"
               className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
             >
               <option value="<1.000€">Menos de 1.000€</option>
